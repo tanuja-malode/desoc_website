@@ -33,7 +33,7 @@ const Events = () => {
       {/* Animated Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-900/10 to-transparent"></div>
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-red-600/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#bc0034]/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
@@ -52,9 +52,9 @@ const Events = () => {
           </h2>
           {/* Decorative underline */}
           <div className="flex items-center justify-center gap-3">
-            <div className="h-[2px] w-12 bg-gradient-to-r from-transparent to-red-500"></div>
-            <div className="h-1 w-20 bg-gradient-to-r from-red-500 via-purple-500 to-red-500 rounded-full"></div>
-            <div className="h-[2px] w-12 bg-gradient-to-l from-transparent to-red-500"></div>
+            <div className="h-[2px] w-12 bg-gradient-to-r from-transparent to-[#bc0034]"></div>
+            <div className="h-1 w-20 bg-gradient-to-r from-[#bc0034] via-purple-500 to-[#bc0034] rounded-full"></div>
+            <div className="h-[2px] w-12 bg-gradient-to-l from-transparent to-[#bc0034]"></div>
           </div>
           <p className="text-gray-400 mt-6 text-lg uppercase tracking-widest">Upcoming & Live</p>
         </div>

@@ -45,7 +45,7 @@ const CommitteeCard = ({ name, role, image, isActive = false }) => {
           className={`
             text-sm font-medium mt-1 uppercase
             transition-colors duration-400
-            ${isActive ? 'text-red-500' : 'text-red-500/50'}
+            ${isActive ? 'text-[#bc0034]' : 'text-[#bc0034]/50'}
           `}
         >
           {role}

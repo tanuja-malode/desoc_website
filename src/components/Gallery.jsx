@@ -174,8 +174,8 @@ const Gallery = () => {
         </h2>
         {/* Decorative underline */}
         <div className="flex items-center justify-center gap-3 mt-4">
-          <div className="h-[2px] w-12 bg-gradient-to-r from-transparent to-red-500"></div>
-          <div className="h-1 w-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full"></div>
+          <div className="h-[2px] w-12 bg-gradient-to-r from-transparent to-[#bc0034]"></div>
+          <div className="h-1 w-16 bg-gradient-to-r from-[#bc0034] to-orange-500 rounded-full"></div>
           <div className="h-[2px] w-12 bg-gradient-to-l from-transparent to-orange-500"></div>
         </div>
       </div>
