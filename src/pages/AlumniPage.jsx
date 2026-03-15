@@ -199,25 +199,15 @@ const AlumniPage = () => {
                 2. NOTABLE ALUMNI
             ============================== */}
             <GlassCard delay={200} isLoaded={isLoaded}>
-              <SectionTitle sub="Making an impact worldwide">Notable Alumni</SectionTitle>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                {notableAlumni.map((alum, index) => (
-                  <div
-                    key={index}
-                    className="group relative p-4 sm:p-5 rounded-2xl border border-white/10 bg-white/5 hover:border-[#bc0034]/40 hover:bg-white/10 transition-all duration-500"
-                  >
-                    {/* Photo */}
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden mx-auto mb-4 border-2 border-[#bc0034]/40 group-hover:border-[#bc0034] group-hover:scale-110 transition-all duration-500" style={{ boxShadow: '0 0 20px rgba(188,0,52,0.2)' }}>
-                      <img src={alum.image} alt={alum.name} className="w-full h-full object-cover object-top" />
-                    </div>
-                    <div className="text-center">
-                      <h3 className="text-white font-bold text-base sm:text-lg mb-1">{alum.name}</h3>
-                      <p className="text-[#d0003d] text-xs sm:text-sm font-medium">{alum.role}</p>
-                      <p className="text-gray-400 text-xs mb-1">{alum.company}</p>
-                      <p className="text-gray-500 text-xs uppercase tracking-wider">Batch of {alum.batch}</p>
-                    </div>
-                  </div>
-                ))}
+              <SectionTitle sub="Coming Soon">Notable Alumni</SectionTitle>
+              <div className="flex flex-col items-center justify-center py-16 sm:py-20">
+                <svg className="w-16 h-16 sm:w-20 sm:h-20 text-[#bc0034]/50 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 className="text-white text-xl sm:text-2xl font-bold mb-2">Coming Soon</h3>
+                <p className="text-gray-400 text-center text-sm sm:text-base max-w-md">
+                  We're curating an amazing collection of our most accomplished alumni. Check back soon!
+                </p>
               </div>
             </GlassCard>
 
@@ -309,174 +299,50 @@ const AlumniPage = () => {
             </GlassCard>
 
             {/* ==============================
-                5. ALUMNI SUCCESS STORIES
+                5. SUCCESS STORIES
             ============================== */}
             <GlassCard delay={500} isLoaded={isLoaded}>
-              <SectionTitle sub="In their own words">Success Stories</SectionTitle>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                {notableAlumni.slice(0, 6).map((alum, index) => (
-                  <div
-                    key={index}
-                    className="group relative p-4 sm:p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-[#bc0034]/30 transition-all duration-500"
-                  >
-                    {/* Quote icon */}
-                    <svg className="w-8 h-8 text-[#bc0034]/30 mb-3" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                    </svg>
-                    <p className="text-gray-300 text-sm leading-relaxed italic mb-4">"{alum.testimonial}"</p>
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#bc0034]/40 shrink-0">
-                        <img src={alum.image} alt={alum.name} className="w-full h-full object-cover object-top" />
-                      </div>
-                      <div>
-                        <h4 className="text-white font-semibold text-sm">{alum.name}</h4>
-                        <p className="text-[#d0003d] text-xs">{alum.role} at {alum.company}</p>
-                        <p className="text-gray-500 text-xs">Batch of {alum.batch}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+              <SectionTitle sub="Coming Soon">Success Stories</SectionTitle>
+              <div className="flex flex-col items-center justify-center py-16 sm:py-20">
+                <svg className="w-16 h-16 sm:w-20 sm:h-20 text-[#bc0034]/50 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 className="text-white text-xl sm:text-2xl font-bold mb-2">Coming Soon</h3>
+                <p className="text-gray-400 text-center text-sm sm:text-base max-w-md">
+                  Inspiring stories from our accomplished alumni are on the way!
+                </p>
               </div>
             </GlassCard>
 
             {/* ==============================
-                6. ALUMNI EVENTS
-            ============================== */}
-            <GlassCard delay={600} isLoaded={isLoaded}>
-              <SectionTitle sub="Reconnect, celebrate, inspire">Alumni Events</SectionTitle>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                {alumniEvents.map((event, index) => (
-                  <div
-                    key={index}
-                    className="relative p-5 sm:p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-[#bc0034]/30 transition-all duration-500"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[#bc0034]/15 border border-[#bc0034]/20 flex items-center justify-center shrink-0">
-                        <svg className="w-6 h-6 text-[#d0003d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-                        </svg>
-                      </div>
-                      <div>
-                        <div className="flex items-center gap-3 mb-2">
-                          <h3 className="text-white font-bold text-base sm:text-lg">{event.title}</h3>
-                        </div>
-                        <span className="inline-block bg-[#bc0034]/20 text-[#d0003d] text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">{event.date}</span>
-                        <p className="text-gray-400 text-sm leading-relaxed">{event.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </GlassCard>
-
-            {/* ==============================
-                7. ALUMNI REGISTRATION FORM
+                6. ALUMNI REGISTRATION
             ============================== */}
             <GlassCard delay={700} isLoaded={isLoaded}>
-              <SectionTitle sub="Join the alumni network">Alumni Registration</SectionTitle>
-
-              {submitted && (
-                <div className="mb-6 p-4 rounded-xl border border-green-500/30 bg-green-500/10 text-green-400 text-sm flex items-center gap-3">
-                  <svg className="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Thank you! Your registration has been submitted successfully.
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="name" className="block text-gray-400 text-xs uppercase tracking-wider mb-2 font-medium">Full Name</label>
-                    <input
-                      type="text" id="name" name="name" required
-                      value={formData.name} onChange={handleChange}
-                      placeholder="John Doe"
-                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/30 transition-all duration-300"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="batch" className="block text-gray-400 text-xs uppercase tracking-wider mb-2 font-medium">Graduation Batch</label>
-                    <input
-                      type="text" id="batch" name="batch" required
-                      value={formData.batch} onChange={handleChange}
-                      placeholder="e.g. 2022"
-                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/30 transition-all duration-300"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="company" className="block text-gray-400 text-xs uppercase tracking-wider mb-2 font-medium">Current Company / Position</label>
-                    <input
-                      type="text" id="company" name="company" required
-                      value={formData.company} onChange={handleChange}
-                      placeholder="e.g. UX Designer at Google"
-                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/30 transition-all duration-300"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-gray-400 text-xs uppercase tracking-wider mb-2 font-medium">Email Address</label>
-                    <input
-                      type="email" id="email" name="email" required
-                      value={formData.email} onChange={handleChange}
-                      placeholder="john@example.com"
-                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/30 transition-all duration-300"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="linkedin" className="block text-gray-400 text-xs uppercase tracking-wider mb-2 font-medium">LinkedIn Profile</label>
-                  <input
-                    type="url" id="linkedin" name="linkedin"
-                    value={formData.linkedin} onChange={handleChange}
-                    placeholder="https://linkedin.com/in/yourprofile"
-                    className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/30 transition-all duration-300"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-gray-400 text-xs uppercase tracking-wider mb-2 font-medium">Message</label>
-                  <textarea
-                    id="message" name="message" rows={4}
-                    value={formData.message} onChange={handleChange}
-                    placeholder="Share your experience, or tell us how you'd like to contribute..."
-                    className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-red-500/50 focus:ring-1 focus:ring-red-500/30 transition-all duration-300 resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto px-8 py-3.5 bg-linear-to-r from-red-700 to-red-600 text-white font-bold uppercase tracking-wider rounded-full hover:from-red-600 hover:to-red-500 transition-all duration-300 hover:scale-105"
-                  style={{ boxShadow: '0 0 30px rgba(220,38,38,0.25)' }}
-                >
-                  Register
-                </button>
-              </form>
+              <SectionTitle sub="Coming Soon">Alumni Registration</SectionTitle>
+              <div className="flex flex-col items-center justify-center py-16 sm:py-20">
+                <svg className="w-16 h-16 sm:w-20 sm:h-20 text-[#bc0034]/50 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 className="text-white text-xl sm:text-2xl font-bold mb-2">Coming Soon</h3>
+                <p className="text-gray-400 text-center text-sm sm:text-base max-w-md">
+                  Alumni registration portal is being prepared. Stay tuned!
+                </p>
+              </div>
             </GlassCard>
 
             {/* ==============================
                 8. ALUMNI GALLERY
             ============================== */}
             <GlassCard delay={800} isLoaded={isLoaded}>
-              <SectionTitle sub="Moments from alumni meetups & events">Alumni Gallery</SectionTitle>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
-                {galleryImages.map((img, index) => (
-                  <div key={index} className="group relative aspect-square rounded-xl overflow-hidden border border-white/10">
-                    <img
-                      src={img}
-                      alt={`Alumni gallery ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <svg className="w-8 h-8 text-white transform scale-0 group-hover:scale-100 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                      </svg>
-                    </div>
-                  </div>
-                ))}
+              <SectionTitle sub="Coming Soon">Alumni Gallery</SectionTitle>
+              <div className="flex flex-col items-center justify-center py-16 sm:py-20">
+                <svg className="w-16 h-16 sm:w-20 sm:h-20 text-[#bc0034]/50 mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h3 className="text-white text-xl sm:text-2xl font-bold mb-2">Coming Soon</h3>
+                <p className="text-gray-400 text-center text-sm sm:text-base max-w-md">
+                  Memorable moments from alumni gatherings and events coming soon!
+                </p>
               </div>
             </GlassCard>
 
