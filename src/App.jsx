@@ -7,6 +7,7 @@ import PastEventDetailPage from './pages/PastEventDetailPage';
 import CommitteePage from './pages/CommitteePage';
 import GenesisPage from './pages/GenesisPage';
 import GenesisEventPage from './pages/GenesisEventPage';
+import SharkverseEventPage from './pages/SharkverseEventPage';
 import RegistrationPage from './pages/RegistrationPage';
 import CSDDepartmentPage from './pages/CSDDepartmentPage';
 import ContactPage from './pages/ContactPage';
@@ -30,6 +31,7 @@ function App() {
       <Route path="/events/:eventId" element={<PastEventDetailPage />} />
       <Route path="/committee" element={<CommitteePage />} />
       <Route path="/genesis" element={<GenesisPage />} />
+      <Route path="/genesis/events/sharkverse" element={<SharkverseEventPage />} />
       <Route path="/genesis/events/:eventId" element={<GenesisEventPage />} />
       <Route path="/genesis/register" element={<RegistrationPage />} />
       <Route path="/csd-department" element={<CSDDepartmentPage />} />

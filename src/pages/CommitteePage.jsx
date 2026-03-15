@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 // Import member images from assets/members
-import adityaImg from '../assets/members/aditya.svg';
+import adityaImg from '../assets/members/aditya1.png';
 import ayushiImg from '../assets/members/ayushi.svg';
 import jeetImg from '../assets/members/jeet.svg';
 import ishaniImg from '../assets/members/ishani.svg';

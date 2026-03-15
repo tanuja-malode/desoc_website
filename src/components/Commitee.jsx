@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import CommitteeCard from './CommiteeCard';
-import adityaImg from '../assets/members/aditya.svg';
+import adityaImg from '../assets/members/aditya1.png';
 import ayushiImg from '../assets/members/ayushi.svg';
 import vedantImg from '../assets/members/vedant.svg';
 import jeetImg from '../assets/members/jeet.svg';
