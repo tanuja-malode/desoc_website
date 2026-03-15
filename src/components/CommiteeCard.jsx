@@ -22,13 +22,13 @@ const CommitteeCard = ({ name, role, image, isActive = false, instagram, linkedi
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 
       {/* Social Icons Slider - Right Edge */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-2 pr-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-2 pr-1 opacity-100 transition-opacity duration-300">
         {instagram && (
           <a 
             href={instagram} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="transform translate-x-16 group-hover:translate-x-0 transition-transform duration-500 ease-out bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 p-1.5 rounded-full hover:scale-110 transition-transform"
+            className="transform translate-x-0 hover:scale-110 transition-transform duration-500 ease-out bg-gradient-to-r from-purple-500 via-red-500 to-yellow-500 p-1.5 rounded-full"
             title="Instagram"
           >
             <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ const CommitteeCard = ({ name, role, image, isActive = false, instagram, linkedi
             href={linkedin} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="transform translate-x-16 group-hover:translate-x-0 transition-transform duration-500 ease-out delay-100 bg-blue-600 hover:bg-blue-700 p-1.5 rounded-full hover:scale-110 transition-transform"
+            className="transform translate-x-0 hover:scale-110 transition-transform duration-500 ease-out bg-blue-600 hover:bg-blue-700 p-1.5 rounded-full"
             title="LinkedIn"
           >
             <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ const CommitteeCard = ({ name, role, image, isActive = false, instagram, linkedi
             href={website} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="transform translate-x-16 group-hover:translate-x-0 transition-transform duration-500 ease-out delay-200 bg-blue-600 hover:bg-blue-700 p-1.5 rounded-full hover:scale-110 transition-transform"
+            className="transform translate-x-0 hover:scale-110 transition-transform duration-500 ease-out bg-blue-600 hover:bg-blue-700 p-1.5 rounded-full"
             title="Website"
           >
             <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
