@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import upiqrImg from '../assets/upiqr.jpeg';
 
 const EVENT_CONFIG = {
-  Sharkverse: { teamSize: '1-4 members', fee: 'Rs.150 per team' },
+  Sharkverse: { date: '28th March 2026', teamSize: '1-4 members', fee: 'Rs.150 per team' },
 };
 
 const EVENT_OPTIONS = Object.keys(EVENT_CONFIG);
@@ -427,6 +427,9 @@ const RegistrationPage = () => {
                 <div className="space-y-3 text-sm sm:text-base">
                   <p className="text-gray-300">
                     <span className="text-red-400 font-medium">Event:</span> {formData.event || 'Select from form'}
+                  </p>
+                  <p className="text-gray-300">
+                    <span className="text-red-400 font-medium">Event Date:</span> {selectedEventMeta.date}
                   </p>
                   <p className="text-gray-300">
                     <span className="text-red-400 font-medium">Team Size:</span> {selectedEventMeta.teamSize}
