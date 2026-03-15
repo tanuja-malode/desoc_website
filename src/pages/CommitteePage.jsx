@@ -30,6 +30,75 @@ import shravaniImg from '../assets/members/shravani.svg';
 import prashantImg from '../assets/members/prashant.svg';
 import siddharthImg from '../assets/members/siddharth.svg';
 
+const SOCIAL_LINKS = {
+  'Shrimant Marathe': {
+    linkedin: 'https://www.linkedin.com/in/shrimant-marathe',
+    github: 'https://github.com/shrimantm',
+  },
+  'Swarada Joshi': {
+    linkedin: 'https://www.linkedin.com/in/swarada-joshi-334a07359',
+  },
+  'Zaweriya Khan': {
+    linkedin: 'https://www.linkedin.com/in/zaweriya-khan-911118332',
+  },
+  'Ishani Murkewar': {
+    linkedin: 'https://www.linkedin.com/in/ishani-murkewar-ab9063317',
+    github: 'https://github.com/ItsJustTheBeginning474264',
+  },
+  'Parth Waje': {
+    linkedin: 'https://www.linkedin.com/in/parth-waje-942416377',
+    github: 'https://github.com/Arkk9',
+  },
+  'Jeet Patil': {
+    linkedin: 'https://www.linkedin.com/in/jeet-patil-68aa44288',
+    github: 'https://github.com/Jeet-Patil',
+  },
+  'Om Chaudhari': {
+    linkedin: 'https://www.linkedin.com/in/om-chaudhari-78b900279',
+    github: 'https://github.com/OmChaudhari08',
+  },
+  'Aditya Ahirrao': {
+    linkedin: 'https://www.linkedin.com/in/aditya-ahirrao-61210721a',
+    github: 'https://github.com/adityaahirrao17-stack',
+  },
+  'Rajan Udapure': {
+    linkedin: 'https://www.linkedin.com/in/rajan-u-406658328',
+    github: 'https://github.com/141206-rjn',
+  },
+  'Sanskruti Gite': {
+    linkedin: 'https://www.linkedin.com/in/sanskrutigite',
+  },
+  'Madhura Katti': {
+    linkedin: 'https://www.linkedin.com/in/madhura-katti-b34965369',
+    github: 'https://github.com/MadhuraKatti',
+  },
+  'Om Patil': {
+    linkedin: 'https://www.linkedin.com/in/om-patil-116984343',
+    github: 'https://github.com/om-27',
+  },
+  'Riya Sequeira': {
+    linkedin: 'https://www.linkedin.com/in/riya-sequeira-bb8281213',
+    github: 'https://github.com/riya-2617',
+  },
+  'Atharva Kulkarni': {
+    linkedin: 'https://www.linkedin.com/in/atharva-kulkarni-b55a9b277',
+    github: 'https://github.com/Atharvakulkarni34',
+  },
+  'Pranita Patil': {
+    linkedin: 'https://www.linkedin.com/in/pranita-patil-0685762a8',
+    github: 'https://github.com/pranita7748',
+  },
+};
+
+const cleanUrl = (url) => {
+  try {
+    const parsed = new URL(url);
+    return `${parsed.origin}${parsed.pathname}`.replace(/\/$/, '');
+  } catch {
+    return url;
+  }
+};
+
 const CommitteePage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -139,39 +208,53 @@ const CommitteePage = () => {
         />
       </div>
 
-      {/* Content */}
-      <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5">
-        <h3 className="text-white font-bold text-base sm:text-lg tracking-wide mb-1 group-hover:text-red-100 transition-colors duration-300">
-          {member.name}
-        </h3>
-        <p className="text-red-400 text-sm font-medium uppercase tracking-wider group-hover:text-red-300 transition-colors duration-300">
+      {/* Content Overlay */}
+      <div className="absolute bottom-5 left-5 right-5">
+        <div className="flex items-center justify-between gap-3">
+          <h3 className="text-white font-semibold text-[18px] sm:text-[20px] leading-tight group-hover:text-red-100 transition-colors duration-300">
+            {member.name}
+          </h3>
+
+          {(member.linkedin || member.github) && (
+            <div
+              className="flex items-center gap-2.5 shrink-0 opacity-100 translate-x-0 lg:opacity-0 lg:translate-x-5 lg:group-hover:opacity-100 lg:group-hover:translate-x-0 lg:pointer-events-none lg:group-hover:pointer-events-auto transition-all ease-out"
+              style={{ transitionDuration: '350ms' }}
+            >
+              {member.linkedin && (
+                <a
+                  href={cleanUrl(member.linkedin)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-[#0a0a0a]/70 border border-white/15 p-1.5 text-gray-300 hover:text-red-400 hover:border-red-400/60 hover:scale-105 transition-all duration-300"
+                  title="LinkedIn"
+                  aria-label={`${member.name} LinkedIn`}
+                >
+                  <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.81 0-9.728h3.554v1.375c.427-.659 1.191-1.595 2.897-1.595 2.117 0 3.704 1.384 3.704 4.362v5.586zM5.337 9.433c-1.144 0-1.915-.759-1.915-1.71 0-.951.77-1.71 1.955-1.71 1.184 0 1.915.759 1.915 1.71 0 .951-.73 1.71-1.955 1.71zm1.575 11.019H3.762V9.724h3.15v10.728zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              )}
+              {member.github && (
+                <a
+                  href={cleanUrl(member.github)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-[#0a0a0a]/70 border border-white/15 p-1.5 text-gray-300 hover:text-red-400 hover:border-red-400/60 hover:scale-105 transition-all duration-300"
+                  title="GitHub"
+                  aria-label={`${member.name} GitHub`}
+                >
+                  <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 .296C5.372.296 0 5.668 0 12.296c0 5.302 3.438 9.8 8.206 11.388.6.111.82-.261.82-.579 0-.286-.011-1.23-.016-2.23-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.303-5.467-1.333-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.006-.404c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.769.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.625-5.479 5.922.43.37.814 1.103.814 2.222 0 1.605-.015 2.898-.015 3.293 0 .321.216.694.825.576C20.565 22.092 24 17.596 24 12.296 24 5.668 18.627.296 12 .296z" />
+                  </svg>
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+
+        <p className="mt-1 text-red-400 text-[13px] sm:text-[14px] font-medium uppercase tracking-[0.08em] group-hover:text-red-300 transition-colors duration-300">
           {member.role}
         </p>
-
-        <div className="mt-3 flex items-center gap-2 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-          <a
-            href={member.linkedin || 'https://linkedin.com'}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-[#0a0a0a]/70 border border-white/15 p-2 text-[#94a3b8] hover:text-[#60a5fa] hover:border-[#60a5fa]/60 transition-all duration-300"
-            title="LinkedIn"
-          >
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.81 0-9.728h3.554v1.375c.427-.659 1.191-1.595 2.897-1.595 2.117 0 3.704 1.384 3.704 4.362v5.586zM5.337 9.433c-1.144 0-1.915-.759-1.915-1.71 0-.951.77-1.71 1.955-1.71 1.184 0 1.915.759 1.915 1.71 0 .951-.73 1.71-1.955 1.71zm1.575 11.019H3.762V9.724h3.15v10.728zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-            </svg>
-          </a>
-          <a
-            href={member.github || 'https://github.com'}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-[#0a0a0a]/70 border border-white/15 p-2 text-gray-300 hover:text-white hover:border-red-400/60 transition-all duration-300"
-            title="GitHub"
-          >
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 .296C5.372.296 0 5.668 0 12.296c0 5.302 3.438 9.8 8.206 11.388.6.111.82-.261.82-.579 0-.286-.011-1.23-.016-2.23-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.303-5.467-1.333-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.006-.404c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.769.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.625-5.479 5.922.43.37.814 1.103.814 2.222 0 1.605-.015 2.898-.015 3.293 0 .321.216.694.825.576C20.565 22.092 24 17.596 24 12.296 24 5.668 18.627.296 12 .296z" />
-            </svg>
-          </a>
-        </div>
       </div>
 
       {/* Corner accent */}
@@ -228,7 +311,7 @@ const CommitteePage = () => {
           {team.members.map((member, index) => (
             <MemberCard 
               key={`${teamKey}-${index}`} 
-              member={member} 
+              member={{ ...member, ...(SOCIAL_LINKS[member.name] || {}) }} 
               index={index + sectionIndex * 3}
             />
           ))}
