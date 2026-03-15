@@ -13,7 +13,6 @@ import sanskrutiImg from '../assets/members/sanskruti.svg';
 import pranitaImg from '../assets/members/pranita.svg';
 import shrimantImg from '../assets/members/shrimant.svg';
 import omcImg from '../assets/members/omc.jpeg';
-import piyushImg from '../assets/members/piyush.svg';
 import rajanImg from '../assets/members/rajan.svg';
 import dishaImg from '../assets/members/disha.svg';
 import madhuraImg from '../assets/members/madhura.svg';
@@ -57,7 +56,7 @@ const CommitteePage = () => {
       members: [
         { name: "Shrimant Marathe", role: "Technical Team", image: shrimantImg },
         { name: "Om Chaudhari", role: "Technical Team", image: omcImg },
-        { name: "Piyush Shendge", role: "Technical Team", image: piyushImg },
+        { name: "Piyush Shendge", role: "Technical Team", image: '' },
         { name: "Rajan Udapure", role: "Technical Team", image: rajanImg },
       ]
     },
