@@ -2,6 +2,7 @@
 import { Link, useSearchParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import upiqrImg from '../assets/upiqr.jpeg';
 
 const EVENT_CONFIG = {
   Sharkverse: { teamSize: '1-4 members', fee: 'Rs.150 per team' },
@@ -438,7 +439,7 @@ const RegistrationPage = () => {
 
               <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 text-center shadow-[0_18px_40px_rgba(0,0,0,0.45),0_0_20px_rgba(220,38,38,0.1)]">
                 <img
-                  src="/src/assets/upiqr.jpeg"
+                  src={upiqrImg}
                   alt="UPI QR Code"
                   className="w-full max-w-65 mx-auto rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.35)]"
                 />

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import sharkverseFlyer from '../assets/genesis/sharkverse.jpeg';
 
 const highlights = [
   { icon: '🏆', title: 'Cash Prizes', text: 'Cash prizes & merit certificates for top performers across all events' },
@@ -191,7 +192,7 @@ const GenesisPage = () => {
 
               <div className="w-[90%] max-w-245 mx-auto mt-10 sm:mt-12 mb-8 sm:mb-10 p-8 sm:p-10 rounded-2xl border border-white/10 bg-white/4 backdrop-blur-xl shadow-[0_22px_55px_rgba(0,0,0,0.45),0_0_24px_rgba(220,38,38,0.12)]">
                 <img
-                  src="/src/assets/genesis/sharkverse.jpeg"
+                  src={sharkverseFlyer}
                   alt="Sharkverse Flyer"
                   className="w-full h-auto rounded-xl mb-6"
                   loading="lazy"
