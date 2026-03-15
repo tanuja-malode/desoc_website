@@ -155,7 +155,7 @@ const CommitteePage = () => {
           href={member.linkedin || 'https://linkedin.com'}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-[#0a5fdb]/80 border border-white/30 p-2.5 text-white hover:bg-[#0a66c2] hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(10,102,194,0.6)] opacity-0 group-hover:opacity-100"
+          className="inline-flex items-center justify-center rounded-full bg-[#1a1a1a]/80 border border-white/30 p-2.5 text-white hover:bg-[#333333] hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] opacity-0 group-hover:opacity-100"
           style={{ transitionDelay: '100ms' }}
           title="LinkedIn"
         >
