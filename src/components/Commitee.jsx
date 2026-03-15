@@ -43,7 +43,7 @@ const Committee = () => {
   const touchEndX = useRef(0);
   const isSwiping = useRef(false);
 
-  // Card dimensions
+  // Card dimensions - responsive
   const cardWidth = 208; // w-48 (192px) + 16px gap
 
   // Calculate active real index for dot indicators (0 to totalSlides-1)
@@ -181,7 +181,7 @@ const Committee = () => {
 
       {/* Cards Container */}
       <div 
-        className="relative bg-[#1a1a1a]/50 backdrop-blur-sm py-12 overflow-hidden touch-pan-y"
+        className="relative bg-[#1a1a1a]/50 backdrop-blur-sm py-12 overflow-x-auto overflow-y-hidden touch-pan-y"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
         onTouchStart={handleTouchStart}
@@ -205,7 +205,7 @@ const Committee = () => {
             className="flex gap-4 items-center"
             style={{ 
               transform: `translateX(calc(50% + ${translateX}px - ${cardWidth / 2}px))`,
-              transition: enableTransition ? 'transform 500ms cubic-bezier(0.4, 0, 0.2, 1)' : 'none'
+              transition: enableTransition ? 'transform 500ms cubic-bezier(0.4, 0, 0.2, 1)' : 'none',
             }}
             onTransitionEnd={handleTransitionEnd}
           >
