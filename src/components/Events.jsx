@@ -4,26 +4,26 @@ const Events = () => {
   const eventsData = [
     {
       id: 1,
-      title: "ECLIPSE - The Game Pitch Arena",
-      tag: "Gaming Competition",
-      description: "Step into the spotlight at ECLIPSE, where aspiring game developers pitch their innovative game concepts to a panel of industry experts. This thrilling event offers a platform to showcase your creativity, receive valuable feedback, and potentially secure support to bring your game idea to life. Whether you're a solo developer or part of a team, ECLIPSE is your chance to shine in the gaming world.",
-      image: "/src/assets/eclipse.jpeg",
+      title: "Sharkverse",
+      tag: "Startup Pitch Arena",
+      description: "Enter Sharkverse and pitch your startup vision to a panel of evaluators. Present your idea, defend your business model, and compete to prove why your concept deserves the spotlight.",
+      image: "/src/assets/unleash.png",
       isLive: true
     },
     {
       id: 2,
-      title: "Cyber Sabha",
-      tag: "Tech Debate",
-      description: "Cyber Sabha is a Yuva Parliament–style discussion forum where teams represent leading organizations like Google, Meta, RBI, and Government bodies (MeitY). Participants debate and deliberate on critical issues related to technology, cybersecurity, digital governance, and policy-making, simulating real-world decision-making at the highest level.",
-      image: "/src/assets/cybersabha.jpeg",
-      isLive: false
+      title: "Bid N Build",
+      tag: "Strategy & Innovation",
+      description: "Bid smart and build better in this strategic challenge. Teams compete to acquire resources through bidding rounds and then transform them into impactful, creative project outcomes.",
+      image: "/src/assets/unleash1.png",
+      isLive: true
     },
     {
       id: 3,
-      title: "UCL – Ultimate Coding League",
-      tag: "Coding Championship",
-      description: "Battle it out in the ultimate coding competition! Test your programming skills, solve challenging problems, and compete against the best coders. UCL is the perfect platform to showcase your technical prowess and learn from fellow competitors in a high-energy environment.",
-      image: "/src/assets/ucl.jpeg",
+      title: "Tresure Hunt",
+      tag: "Adventure Challenge",
+      description: "Follow clues, solve fast-paced puzzles, and race through checkpoints in Tresure Hunt. This event blends logic, teamwork, and speed into a high-energy campus adventure.",
+      image: "/src/assets/unleash2.png",
       isLive: true
     }
   ];

@@ -9,12 +9,12 @@ import ishaniImg from '../assets/members/ishani.svg';
 
 const Committee = () => {
   const committeeMembers = [
-    { id: 1, name: "Aditya Ahirrao", role: "President", image: adityaImg, instagram: "https://instagram.com", linkedin: "https://linkedin.com", website: "https://portfolio-t11h.vercel.app/" },
-    { id: 2, name: "Ayushi Deore", role: "Vice President", image: ayushiImg, instagram: "https://instagram.com", linkedin: "https://linkedin.com" },
-    { id: 3, name: "Vedant Sonawane", role: "Event Operation Head", image: vedantImg, instagram: "https://instagram.com", linkedin: "https://linkedin.com" },
-    { id: 4, name: "Jeet Patil", role: "Tech Head", image: jeetImg, instagram: "https://instagram.com", linkedin: "https://linkedin.com" },
-    { id: 5, name: "Monish Patil", role: "Design Team Head", image: monishImg, instagram: "https://instagram.com", linkedin: "https://linkedin.com" },
-    { id: 6, name: "Ishani Mukewar", role: "Secretary", image: ishaniImg, instagram: "https://instagram.com", linkedin: "https://linkedin.com" }
+    { id: 1, name: "Aditya Ahirrao", role: "President", image: adityaImg },
+    { id: 2, name: "Ayushi Deore", role: "Vice President", image: ayushiImg },
+    { id: 3, name: "Vedant Sonawane", role: "Event Operation Head", image: vedantImg },
+    { id: 4, name: "Jeet Patil", role: "Tech Head", image: jeetImg },
+    { id: 5, name: "Monish Patil", role: "Design Team Head", image: monishImg },
+    { id: 6, name: "Ishani Mukewar", role: "Secretary", image: ishaniImg }
   ];
 
   const totalSlides = committeeMembers.length;
@@ -222,9 +222,6 @@ const Committee = () => {
                   role={member.role}
                   image={member.image}
                   isActive={isActive}
-                  instagram={member.instagram}
-                  linkedin={member.linkedin}
-                  website={member.website}
                 />
               );
             })}

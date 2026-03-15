@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const menuItems = [
     { name: 'Home', path: '/', type: 'route' },
-    { name: 'Events', path: '/#events', type: 'hash' },
+    { name: 'Events', path: '/events', type: 'route' },
     { name: 'Alumni', path: '/alumni', type: 'route' },
     { name: 'Committee', path: '/committee', type: 'route' },
     { name: 'Genesis', path: '/genesis', type: 'route' },
@@ -19,15 +19,15 @@ const Navbar = () => {
   const isActive = (item) => item.type === 'route' && location.pathname === item.path;
 
   return (
-    <nav className="fixed top-6 right-6 lg:right-12 z-50">
+    <nav className="fixed top-4 right-4 lg:right-8 z-50">
       {/* Desktop Menu - Pill Container */}
-      <div className="hidden md:flex items-center bg-[#970233] rounded-full px-6 py-2 shadow-lg">
+      <div className="hidden md:flex items-center bg-[#970233] rounded-full px-4 py-1.5 shadow-lg">
         {menuItems.map((item) => (
           item.type === 'route' ? (
             <Link
               key={item.name}
               to={item.path}
-              className={`text-white transition-all duration-300 px-5 py-2 text-base font-medium rounded-full ${
+              className={`text-white transition-all duration-300 px-3 py-1.5 text-sm font-medium rounded-full ${
                 isActive(item) ? 'bg-white/20' : 'hover:bg-white/10'
               }`}
             >
@@ -37,7 +37,7 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.path}
-              className="text-white hover:bg-white/10 transition-all duration-300 px-5 py-2 text-base font-medium rounded-full"
+              className="text-white hover:bg-white/10 transition-all duration-300 px-3 py-1.5 text-sm font-medium rounded-full"
             >
               {item.name}
             </a>
@@ -48,9 +48,9 @@ const Navbar = () => {
       {/* Mobile Hamburger */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="md:hidden text-white bg-[#970233] p-4 rounded-full"
+        className="md:hidden text-white bg-[#970233] p-3 rounded-full"
       >
-        <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
           {isMenuOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
         </svg>
       </button>
