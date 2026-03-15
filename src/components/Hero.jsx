@@ -81,7 +81,11 @@ const Hero = () => {
         </p>
         
         <div className="flex gap-3 sm:gap-4 flex-wrap justify-center">
-          <button className="px-6 py-2 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-white font-bold text-sm sm:text-base rounded transition-colors duration-300 animate-fadeInUp" style={{animationDelay: '0.2s'}}>
+          <button
+            onClick={() => navigate('/about')}
+            className="px-6 py-2 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-white font-bold text-sm sm:text-base rounded transition-colors duration-300 animate-fadeInUp"
+            style={{ animationDelay: '0.2s' }}
+          >
             About us
           </button>
           <button 

@@ -264,7 +264,7 @@ const CSDDepartmentPage = () => {
             <GlassCard delay={400}>
               <SectionTitle>Laboratories</SectionTitle>
 
-              {/* Lab navigation tabs — horizontal scroll on mobile */}
+              {/*
               <div className="mb-6 sm:mb-8 overflow-x-auto scrollbar-hide">
                 <div className="inline-flex flex-nowrap sm:flex-wrap gap-2 bg-black/30 p-2 rounded-2xl sm:rounded-full min-w-max sm:min-w-0">
                   {laboratories.map((lab, index) => (
@@ -283,7 +283,6 @@ const CSDDepartmentPage = () => {
                 </div>
               </div>
 
-              {/* Active lab showcase */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                 <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10">
                   <img
@@ -302,7 +301,6 @@ const CSDDepartmentPage = () => {
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">{laboratories[activeLab].name}</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">{laboratories[activeLab].description}</p>
 
-                  {/* Small thumbnail grid */}
                   <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
                     {laboratories.map((lab, index) => (
                       <button
@@ -318,6 +316,15 @@ const CSDDepartmentPage = () => {
                   </div>
                 </div>
               </div>
+              */}
+
+              {/* Temporarily disabled: full laboratories showcase */}
+              <div className="rounded-2xl border border-dashed border-red-500/30 bg-red-500/5 px-6 py-10 text-center">
+                <p className="text-white text-xl sm:text-2xl font-semibold mb-2">Coming Soon</p>
+                <p className="text-gray-400 max-w-2xl mx-auto">
+                  The Laboratories section is currently being updated and will be available soon.
+                </p>
+              </div>
             </GlassCard>
 
             {/* ==============================
@@ -325,6 +332,8 @@ const CSDDepartmentPage = () => {
             ============================== */}
             <GlassCard delay={500}>
               <SectionTitle>Alumni</SectionTitle>
+
+              {/*
               <p className="text-gray-400 mb-8 max-w-2xl leading-relaxed">
                 Our alumni are shaping the future of technology and design at leading organizations around the world. Here's what some of them have to say.
               </p>
@@ -334,13 +343,11 @@ const CSDDepartmentPage = () => {
                     key={index}
                     className="group relative p-4 sm:p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-red-500/30 transition-all duration-500"
                   >
-                    {/* Quote icon */}
                     <svg className="w-8 h-8 text-red-500/30 mb-3" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                     <p className="text-gray-300 text-sm leading-relaxed italic mb-4">"{alum.testimonial}"</p>
                     <div className="flex items-center gap-3">
-                      {/* Avatar */}
                       <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-red-600/40 flex-shrink-0">
                         <img src={alum.image} alt={alum.name} className="w-full h-full object-cover object-top" />
                       </div>
@@ -352,6 +359,15 @@ const CSDDepartmentPage = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+              */}
+
+              {/* Temporarily disabled: alumni testimonials grid */}
+              <div className="rounded-2xl border border-dashed border-red-500/30 bg-red-500/5 px-6 py-10 text-center">
+                <p className="text-white text-xl sm:text-2xl font-semibold mb-2">Coming Soon</p>
+                <p className="text-gray-400 max-w-2xl mx-auto">
+                  The Alumni section is under maintenance and will be published soon.
+                </p>
               </div>
             </GlassCard>
 
