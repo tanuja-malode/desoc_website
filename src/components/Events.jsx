@@ -1,4 +1,7 @@
 import EventCard from './EventCard';
+import sharkverseImg from '../assets/genesis/sharkverse.jpeg';
+import unleash1Img from '../assets/unleash1.png';
+import unleash2Img from '../assets/unleash2.png';
 
 const Events = () => {
   const eventsData = [
@@ -8,7 +11,7 @@ const Events = () => {
       title: "Sharkverse",
       tag: "Startup Pitch Arena",
       description: "Enter Sharkverse and pitch your startup vision to a panel of evaluators. Present your idea, defend your business model, and compete to prove why your concept deserves the spotlight.",
-      image: "/src/assets/genesis/sharkverse.jpeg",
+      image: sharkverseImg,
       isLive: true,
       comingSoon: false
     },
@@ -18,7 +21,7 @@ const Events = () => {
       title: "Bid N Build",
       tag: "Strategy & Innovation",
       description: "Bid smart and build better in this strategic challenge. Teams compete to acquire resources through bidding rounds and then transform them into impactful, creative project outcomes.",
-      image: "/src/assets/unleash1.png",
+      image: unleash1Img,
       isLive: true,
       comingSoon: true
     },
@@ -28,7 +31,7 @@ const Events = () => {
       title: "Tresure Hunt",
       tag: "Adventure Challenge",
       description: "Follow clues, solve fast-paced puzzles, and race through checkpoints in Tresure Hunt. This event blends logic, teamwork, and speed into a high-energy campus adventure.",
-      image: "/src/assets/unleash2.png",
+      image: unleash2Img,
       isLive: true,
       comingSoon: true
     }
