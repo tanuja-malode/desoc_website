@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import sharkverseImg from '../assets/genesis/sharkverse.jpeg';
 
 const participationDetails = [
-  
+  { label: 'Event Date', value: '28th March 2026' },
   { label: 'Team Size', value: '1-4 members per team' },
   { label: 'Registration Fee', value: 'Rs.150 per team' },
   { label: 'Target Audience', value: 'Aspiring entrepreneurs, innovators, and problem-solvers' },
@@ -90,7 +91,7 @@ const SharkverseEventPage = () => {
           <div className="space-y-6 sm:space-y-8">
             <section className={sectionClass}>
               <img
-                src="/src/assets/genesis/sharkverse.jpeg"
+                src={sharkverseImg}
                 alt="Sharkverse event flyer"
                 className="w-full h-auto rounded-xl border border-white/10"
                 loading="lazy"

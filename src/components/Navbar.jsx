@@ -16,18 +16,25 @@ const Navbar = () => {
     { name: 'Contact Us', path: '/contact', type: 'route' },
   ];
 
-  const isActive = (item) => item.type === 'route' && location.pathname === item.path;
+  const isActive = (item) => {
+    if (item.type !== 'route') return false;
+    if (item.path === '/') return location.pathname === '/';
+    return location.pathname === item.path || location.pathname.startsWith(`${item.path}/`);
+  };
 
   return (
-    <nav className="fixed top-4 right-4 lg:right-8 z-50">
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 h-17.5 px-4 lg:px-8 flex items-center justify-end"
+      style={{ fontFamily: "'Roboto Condensed', system-ui, Avenir, Helvetica, Arial, sans-serif" }}
+    >
       {/* Desktop Menu - Pill Container */}
-      <div className="hidden md:flex items-center bg-[#970233] rounded-full px-4 py-1.5 shadow-lg">
+      <div className="hidden md:flex items-center h-11 bg-[#970233] rounded-full px-4 py-1.5 shadow-lg whitespace-nowrap">
         {menuItems.map((item) => (
           item.type === 'route' ? (
             <Link
               key={item.name}
               to={item.path}
-              className={`text-white transition-all duration-300 px-3 py-1.5 text-sm font-medium rounded-full ${
+              className={`inline-flex items-center h-8 text-white transition-all duration-300 px-3 py-1.5 text-sm font-medium rounded-full ${
                 isActive(item) ? 'bg-white/20' : 'hover:bg-white/10'
               }`}
             >
@@ -37,7 +44,7 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.path}
-              className="text-white hover:bg-white/10 transition-all duration-300 px-3 py-1.5 text-sm font-medium rounded-full"
+              className="inline-flex items-center h-8 text-white hover:bg-white/10 transition-all duration-300 px-3 py-1.5 text-sm font-medium rounded-full"
             >
               {item.name}
             </a>
