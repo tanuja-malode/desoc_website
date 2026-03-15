@@ -176,12 +176,6 @@ const CommitteePage = () => {
           </svg>
         </a>
       </div>
-
-      {/* Corner accent */}
-      <div 
-        className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        style={{ background: 'linear-gradient(to bottom left, rgba(220,38,38,0.3), transparent)' }}
-      />
     </div>
   );
 
