@@ -116,23 +116,17 @@ const ContactPage = () => {
           {/* ===== Page Header ===== */}
           <header className={`text-center mb-12 sm:mb-16 md:mb-20 transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
             <div className="relative inline-block">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-1 rounded-full" style={{ background: 'linear-gradient(to right, transparent, #ef4444, transparent)', boxShadow: '0 0 20px rgba(220,38,38,0.5)' }} />
-
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4">
                 Contact Us
               </h1>
-
               <div className="flex items-center justify-center gap-3 mb-6">
                 <div className="h-px w-12" style={{ background: 'linear-gradient(to right, transparent, #ef4444)' }} />
                 <span className="text-red-400 text-lg sm:text-xl md:text-2xl font-light tracking-widest">Get in Touch</span>
                 <div className="h-px w-12" style={{ background: 'linear-gradient(to left, transparent, #ef4444)' }} />
               </div>
-
               <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
                 Have a question, idea, or just want to say hello? Reach out to us through any of the channels below or fill out the contact form.
               </p>
-
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-40 h-1 rounded-full" style={{ background: 'linear-gradient(to right, transparent, rgba(220,38,38,0.5), transparent)' }} />
             </div>
           </header>
 

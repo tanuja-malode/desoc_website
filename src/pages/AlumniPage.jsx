@@ -125,8 +125,6 @@ const AlumniPage = () => {
           ============================== */}
           <header className={`text-center mb-12 sm:mb-16 md:mb-20 transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
             <div className="relative inline-block">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-1 rounded-full" style={{ background: 'linear-gradient(to right, transparent, #bc0034, transparent)', boxShadow: '0 0 20px rgba(188,0,52,0.5)' }} />
-
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4">
                 Our Alumni
               </h1>
@@ -155,8 +153,6 @@ const AlumniPage = () => {
                   </div>
                 ))}
               </div>
-
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-40 h-1 rounded-full" style={{ background: 'linear-gradient(to right, transparent, rgba(220,38,38,0.5), transparent)' }} />
             </div>
           </header>
 
