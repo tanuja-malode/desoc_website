@@ -2,9 +2,11 @@ import backgroundImage from '../assets/bg.png';
 import desocLogo from '../assets/logo_home.png';
 import clgLogo from '../assets/clg_logo.svg';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [events, setEvents] = useState(0);
   const [participation, setParticipation] = useState(0);
   const [alumni, setAlumni] = useState(0);
@@ -82,7 +84,13 @@ const Hero = () => {
           <button className="px-6 py-2 bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-white font-bold text-sm sm:text-base rounded transition-colors duration-300 animate-fadeInUp" style={{animationDelay: '0.2s'}}>
             About us
           </button>
-          <button className="px-6 py-2 backdrop-blur-md border border-white/30 text-white font-bold text-sm sm:text-base rounded transition-all duration-300 animate-fadeInUp" style={{background: 'linear-gradient(135deg, #970233 0%, #c41e5c 100%)', animationDelay: '0.3s'}} onMouseEnter={(e) => e.target.style.background = 'linear-gradient(135deg, #800125 0%, #a41650 100%)'} onMouseLeave={(e) => e.target.style.background = 'linear-gradient(135deg, #970233 0%, #c41e5c 100%)'}>
+          <button 
+            onClick={() => navigate('/genesis')}
+            className="px-6 py-2 backdrop-blur-md border border-white/30 text-white font-bold text-sm sm:text-base rounded transition-all duration-300 animate-fadeInUp cursor-pointer" 
+            style={{background: 'linear-gradient(135deg, #970233 0%, #c41e5c 100%)', animationDelay: '0.3s'}} 
+            onMouseEnter={(e) => e.target.style.background = 'linear-gradient(135deg, #800125 0%, #a41650 100%)'} 
+            onMouseLeave={(e) => e.target.style.background = 'linear-gradient(135deg, #970233 0%, #c41e5c 100%)'}
+          >
             GENESIS
           </button>
         </div>

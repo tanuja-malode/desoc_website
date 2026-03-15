@@ -114,27 +114,20 @@ const CSDDepartmentPage = () => {
           {/* ===== Page Header ===== */}
           <header className={`text-center mb-12 sm:mb-16 md:mb-20 transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
             <div className="relative inline-block">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-1 rounded-full" style={{ background: 'linear-gradient(to right, transparent, #ef4444, transparent)', boxShadow: '0 0 20px rgba(220,38,38,0.5)' }} />
-
               <div className="flex justify-center mb-6">
                 <img src={desocLogo} alt="CSD Logo" className="w-20 h-20 sm:w-24 sm:h-24" />
               </div>
-
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4">
                 Department of Computer Science & Design
               </h1>
-
               <div className="flex items-center justify-center gap-3 mb-6">
                 <div className="h-px w-12" style={{ background: 'linear-gradient(to right, transparent, #ef4444)' }} />
                 <span className="text-red-400 text-lg sm:text-xl md:text-2xl font-light tracking-widest">K K Wagh Institute</span>
                 <div className="h-px w-12" style={{ background: 'linear-gradient(to left, transparent, #ef4444)' }} />
               </div>
-
               <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
                 Shaping the future at the intersection of Computer Science and Design — nurturing innovators, creators, and technology leaders since inception.
               </p>
-
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-40 h-1 rounded-full" style={{ background: 'linear-gradient(to right, transparent, rgba(220,38,38,0.5), transparent)' }} />
             </div>
           </header>
 
