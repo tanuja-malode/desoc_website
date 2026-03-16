@@ -159,13 +159,20 @@ const CommitteePage = () => {
   };
 
   // Member Card Component
-  const MemberCard = ({ member, index }) => (
+  const MemberCard = ({ member, index }) => {
+    const [showIcons, setShowIcons] = useState(false);
+
+    const handleCardClick = () => {
+      setShowIcons(!showIcons);
+    };
+
+    return (
     <div
       className={`
         group relative overflow-hidden rounded-2xl
         backdrop-blur-xl border border-white/10
         transition-all duration-500 ease-out
-        hover:scale-105 hover:border-red-500/50
+        hover:scale-105 hover:border-red-500/50 cursor-pointer
         ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
       `}
       style={{ 
@@ -179,6 +186,7 @@ const CommitteePage = () => {
       onMouseLeave={(e) => {
         e.currentTarget.style.boxShadow = '0 8px 32px rgba(0,0,0,0.3)';
       }}
+      onClick={handleCardClick}
     >
       {/* Glow effect on hover */}
       <div 
@@ -218,13 +226,13 @@ const CommitteePage = () => {
         </p>
       </div>
 
-      {/* Right Edge Slider */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-3 pr-3 py-4 opacity-0 translate-x-8 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500">
+      {/* Right Edge Slider - Desktop (hover) and Mobile (click) */}
+      <div className={`absolute right-0 top-1/2 -translate-y-1/2 flex flex-col gap-3 pr-3 py-4 transition-all duration-500 md:opacity-0 md:translate-x-8 md:group-hover:opacity-100 md:group-hover:translate-x-0 ${showIcons ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8 md:opacity-0 md:translate-x-8'}`}>
         <a
           href={member.linkedin || 'https://linkedin.com'}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-[#1a1a1a]/80 border border-white/30 p-2.5 text-white hover:bg-[#333333] hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] opacity-0 group-hover:opacity-100"
+          className="inline-flex items-center justify-center rounded-full bg-[#1a1a1a]/80 border border-white/30 p-2.5 text-white hover:bg-[#333333] hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] md:opacity-0 md:group-hover:opacity-100"
           style={{ transitionDelay: '100ms' }}
           title="LinkedIn"
         >
@@ -236,7 +244,7 @@ const CommitteePage = () => {
           href={member.github || 'https://github.com'}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-[#1a1a1a]/80 border border-white/30 p-2.5 text-white hover:bg-[#333333] hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] opacity-0 group-hover:opacity-100"
+          className="inline-flex items-center justify-center rounded-full bg-[#1a1a1a]/80 border border-white/30 p-2.5 text-white hover:bg-[#333333] hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] md:opacity-0 md:group-hover:opacity-100"
           style={{ transitionDelay: '150ms' }}
           title="GitHub"
         >
@@ -249,7 +257,7 @@ const CommitteePage = () => {
             href={member.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-[#1a1a1a]/80 border border-white/30 p-2.5 text-white hover:bg-[#333333] hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] opacity-0 group-hover:opacity-100"
+            className="inline-flex items-center justify-center rounded-full bg-[#1a1a1a]/80 border border-white/30 p-2.5 text-white hover:bg-[#333333] hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] md:opacity-0 md:group-hover:opacity-100"
             style={{ transitionDelay: '200ms' }}
             title="Website"
           >
@@ -260,7 +268,8 @@ const CommitteePage = () => {
         )}
       </div>
     </div>
-  );
+    );
+  };
 
   // Team Section Component
   const TeamSection = ({ teamKey, team, sectionIndex }) => (
